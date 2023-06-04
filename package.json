@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "npm run no-telemetry && next dev",
+    "build": "npm run no-telemetry && next build",
+    "start": "npm run no-telemetry && next start",
+    "lint": "npm run no-telemetry && next lint",
+    "no-telemetry": "next telemetry disable"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
